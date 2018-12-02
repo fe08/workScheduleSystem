@@ -1,2 +1,5 @@
 # workScheduleSystem
-use for share! just do your best!
+
+learning , working, sharing, upgrading!
+
+just do your best!
