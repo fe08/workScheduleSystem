@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d86290e-e210-4d68-bfe9-956d06008d70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/原型/功能需求.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/原型/功能需求.md" beforeDir="false" afterPath="$PROJECT_DIR$/原型/功能需求.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -137,12 +137,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543755035770</updated>
       <workItem from="1543755038983" duration="459000" />
-      <workItem from="1543842419198" duration="240000" />
+      <workItem from="1543842419198" duration="331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="699000" />
+    <option name="totallyTimeSpent" value="790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="291" y="1103" width="1280" height="777" extended-state="0" />
