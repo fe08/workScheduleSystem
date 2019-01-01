@@ -28,7 +28,10 @@ module.exports = {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    'assets/main.css'
+    'assets/main.css',
+    "~/static/common.css",
+    "~/static/font/iconfont.css"
+
   ],
 
   /*
@@ -38,7 +41,11 @@ module.exports = {
     '@/plugins/element-ui',
     '~/plugins/text_inject.js',
     '~/plugins/combine_inject.js',
-    '~/plugins/ctx_inject.js'
+    '~/plugins/ctx_inject.js',
+    { src: "~/static/font/iconfont.js", ssr: false },
+    '~/plugins/mock.js',
+    // 自定义的axios
+    '~/plugins/axios'
   ],
 
   /*
@@ -53,6 +60,13 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    proxy: true,
+  },
+  /*
+  ** 自定义的网址， 前缀是api，baseURL
+   */
+  proxy: {
+    '/api/': { target: 'http://localhost:3000', pathRewrite: {'^/api/': ''} }
   },
 
   /*

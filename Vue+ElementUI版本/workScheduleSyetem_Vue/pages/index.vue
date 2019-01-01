@@ -12,12 +12,20 @@
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
               <el-form-item prop="name">
                 <el-input v-model="ruleForm.name">
-                  <template slot="prepend">账号</template>
+                  <template slot="prepend">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-yonghuming"></use>
+                    </svg>
+                  </template>
                 </el-input>
               </el-form-item>
               <el-form-item prop="pwd">
                 <el-input v-model="ruleForm.pwd" type="password">
-                  <template slot="prepend">密码</template>
+                  <template slot="prepend">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-mima"></use>
+                    </svg>
+                  </template>
                 </el-input>
               </el-form-item>
               <el-form-item>

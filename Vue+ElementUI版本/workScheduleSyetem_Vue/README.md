@@ -1,4 +1,4 @@
-# workScheduleSyetem_Vue
+# workScheduleSystem_Vue
 
 > learning vue and elementUI
 
