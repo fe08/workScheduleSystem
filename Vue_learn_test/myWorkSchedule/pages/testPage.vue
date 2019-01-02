@@ -4,17 +4,21 @@
 
     <hr>
     <span>
-      {{id}} 例如这是修改
+      {{id}} 例如这是修改 {{str}}
     </span>
+    <hr>
+    <el-button @click="testMock" type="warning">testMock</el-button>
   </div>
 </template>
 
 <script>
+  import axios from 'axios'
   export default {
     data() {
       return {
         msg: "",
-        id: ''
+        id: '',
+        str: ''
       }
     },
 
@@ -42,7 +46,17 @@
       },
       b(){
 
+      },
+
+      testMock() {
+        axios.post('/test', {name: 'dina'}).then(resp => {
+          // console.log(resp.data)
+          this.str = resp.data.data
+        })
       }
+
+      // yarn add mockjs
+
     },
   }
 </script>
