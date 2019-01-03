@@ -11,6 +11,7 @@
     <hr>
 
     <el-button plain>朴素按钮</el-button>
+
   </div>
 </template>
 
@@ -65,5 +66,14 @@
 </script>
 
 <style scoped>
+  .outer-test {
+    background-color: aqua;
+  }
 
+.test {
+  font-size: 36px;
+  color: red;
+  margin:10px;
+  background-color: #fff;
+}
 </style>

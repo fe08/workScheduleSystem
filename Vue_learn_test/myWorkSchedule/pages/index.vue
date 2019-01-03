@@ -4,26 +4,26 @@
       <div class="wss-login-box">
         <div class="wss-login-box__title">
           排班系统
-          {{input3}}
-
-          普通
-          {{normal}}
         </div>
 
         <div class="wss-login-box__item">
-          <el-input placeholder="请输入内容" v-bind="normal">
-            <template slot="prepend">请输入姓名</template>
+          <el-input placeholder="请输入用户名" v-model="name">
+            <template slot="prepend">
+              <i class="iconfont icon-yonghu"></i>
+            </template>
           </el-input>
         </div>
 
         <div class="wss-login-box__item">
-          <el-input placeholder="请输入内容"  v-model="input3" type="password">
-            <template slot="prepend">请输入密码</template>
+          <el-input placeholder="请输入密码"  v-model="password" type="password">
+            <template slot="prepend">
+              <i class="iconfont icon-mima"></i>
+            </template>
           </el-input>
         </div>
 
         <div class="wss-login-box__btns">
-          <el-button type="success">登录</el-button>
+          <el-button type="success" @click="toPage">登录</el-button>
         </div>
       </div>
     </el-card>
@@ -32,6 +32,10 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+const pageList = {
+  admin: '/adminPage',
+  user: '/userPage',
+}
 
 export default {
   layout: 'login',
@@ -41,24 +45,21 @@ export default {
 
   data() {
     return {
-      input3: '',
+      name: '',
 
-      normal: ""
+      password: ""
     }
   },
   methods: {
-    toTestPage() {
-      // vue-router
-      this.$router.push({
-        path: 'testPage',
-        query: {
-          a: 466
-        }
-      })
-    },
-
-    dy() {
-      this.toTestPage()
+    toPage() {
+      // console.log("name,", this.name)
+      const page = pageList[this.name]
+      console.log(page)
+      if (page) {
+        this.$router.push({
+          path: page
+        })
+      }
     }
   }
 }
