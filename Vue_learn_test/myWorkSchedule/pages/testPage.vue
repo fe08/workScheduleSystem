@@ -8,6 +8,9 @@
     </span>
     <hr>
     <el-button @click="testMock" type="warning">testMock</el-button>
+    <hr>
+
+    <el-button plain>朴素按钮</el-button>
   </div>
 </template>
 

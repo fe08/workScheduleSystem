@@ -1,18 +1,32 @@
 <template>
-  <div>
-    my word schedule
+  <div class="wss-container">
+    <el-card>
+      <div class="wss-login-box">
+        <div class="wss-login-box__title">
+          排班系统
+          {{input3}}
 
-    <el-button type="primary" @click="toTestPage">toTestPage</el-button>
+          普通
+          {{normal}}
+        </div>
 
-    <!--纯粹是a标签的样子-->
-    <nuxt-link to="/testPage">基础用法</nuxt-link>
+        <div class="wss-login-box__item">
+          <el-input placeholder="请输入内容" v-bind="normal">
+            <template slot="prepend">请输入姓名</template>
+          </el-input>
+        </div>
 
+        <div class="wss-login-box__item">
+          <el-input placeholder="请输入内容"  v-model="input3" type="password">
+            <template slot="prepend">请输入密码</template>
+          </el-input>
+        </div>
 
-    <nuxt-link :to="{path:'/testPage', query: {a: 233}}">另一个跳转的方法</nuxt-link>
-
-    <hr>
-
-    <el-button type="warning" @click="dy">调用方法</el-button>
+        <div class="wss-login-box__btns">
+          <el-button type="success">登录</el-button>
+        </div>
+      </div>
+    </el-card>
   </div>
 </template>
 
@@ -20,10 +34,18 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  layout: 'login',
   components: {
     Logo
   },
 
+  data() {
+    return {
+      input3: '',
+
+      normal: ""
+    }
+  },
   methods: {
     toTestPage() {
       // vue-router
@@ -42,7 +64,31 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.wss-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  .wss-login-box {
+    background: #FFF;
+    border: 1px solid #ececec;
+    padding: 10px;
+  }
+.wss-login-box__title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
 
+.wss-login-box__item {
+  margin-bottom: 10px;
+}
 
+  .wss-login-box__btns {
+    margin-top: 10px;
+    text-align: center;
+  }
 </style>
