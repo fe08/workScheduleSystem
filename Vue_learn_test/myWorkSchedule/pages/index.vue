@@ -2,9 +2,7 @@
   <div class="wss-container">
     <el-card>
       <div class="wss-login-box">
-        <div class="wss-login-box__title">
-          排班系统
-        </div>
+        <div class="wss-login-box__title">排班系统</div>
 
         <div class="wss-login-box__item">
           <el-input placeholder="请输入用户名" v-model="name">
@@ -15,7 +13,7 @@
         </div>
 
         <div class="wss-login-box__item">
-          <el-input placeholder="请输入密码"  v-model="password" type="password">
+          <el-input placeholder="请输入密码" v-model="password" type="password">
             <template slot="prepend">
               <i class="iconfont icon-mima"></i>
             </template>
@@ -31,38 +29,38 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from "~/components/Logo.vue";
 const pageList = {
-  admin: '/adminPage',
-  user: '/userPage',
-}
+  admin: "/adminPage",
+  user: "/userPage"
+};
 
 export default {
-  layout: 'login',
+  layout: "login",
   components: {
     Logo
   },
 
   data() {
     return {
-      name: '',
+      name: "",
 
       password: ""
-    }
+    };
   },
   methods: {
     toPage() {
       // console.log("name,", this.name)
-      const page = pageList[this.name]
-      console.log(page)
+      const page = pageList[this.name];
+      console.log(page);
       if (page) {
         this.$router.push({
           path: page
-        })
+        });
       }
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -72,11 +70,11 @@ export default {
   align-items: center;
   height: 100vh;
 }
-  .wss-login-box {
-    background: #FFF;
-    border: 1px solid #ececec;
-    padding: 10px;
-  }
+.wss-login-box {
+  background: #fff;
+  border: 1px solid #ececec;
+  padding: 10px;
+}
 .wss-login-box__title {
   margin-bottom: 20px;
   font-size: 30px;
@@ -88,8 +86,8 @@ export default {
   margin-bottom: 10px;
 }
 
-  .wss-login-box__btns {
-    margin-top: 10px;
-    text-align: center;
-  }
+.wss-login-box__btns {
+  margin-top: 10px;
+  text-align: center;
+}
 </style>
