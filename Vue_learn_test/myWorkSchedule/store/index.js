@@ -1,18 +1,19 @@
-import Vue from "vue";
-import Vuex from "vuex";
-
-Vue.use(Vuex);
-
-const store = () =>
-  new Vuex.Store({
-    state: {
-      counter: 0
+export const state = () => ({
+  account: [
+    {
+      name: "admin",
+      password: "123456"
     },
-    mutations: {
-      increment(state) {
-        state.counter++;
-      }
+    {
+      name: "user",
+      password: "321"
     }
-  });
+  ],
+  valid: false
+});
 
-export default store;
+export const mutations = {
+  increment(state) {
+    state.counter++;
+  }
+};

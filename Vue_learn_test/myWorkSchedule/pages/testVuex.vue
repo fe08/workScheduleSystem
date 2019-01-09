@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <button @click="$store.commit('increment')">{{ $store.state.counter }}</button> -->
+    <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   },
   mounted() {
     console.log(this.$store);
-    console.log(store.state);
+    // console.log(store.state);
   }
 };
 </script>

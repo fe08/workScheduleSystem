@@ -40,6 +40,11 @@ export default {
   components: {
     Logo
   },
+  computed: {
+    account() {
+      return this.$store.state.account;
+    }
+  },
 
   data() {
     return {
@@ -48,15 +53,18 @@ export default {
       password: ""
     };
   },
+
+  mounted() {
+    console.log(this.account);
+  },
+
   methods: {
     toPage() {
-      // console.log("name,", this.name)
-      const page = pageList[this.name];
-      console.log(page);
-      if (page) {
-        this.$router.push({
-          path: page
-        });
+      for (var i = 0; i < this.account.length; i++) {
+        var item = this.account[i];
+        if (item.name === this.name && item.password === this.password) {
+          console.log("ok");
+        }
       }
     }
   }
